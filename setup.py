@@ -18,7 +18,7 @@
 """Setuptools based installation."""
 
 __license__ = 'GPLv3'
-__copyright__ = 'Copyright (C) 2019 Frootlab Developers'
+__copyright__ = '2019 Frootlab Developers'
 __email__ = 'frootlab@gmail.com'
 __docformat__ = 'google'
 __authors__ = ['Patrick Michl <patrick.michl@gmail.com>']
