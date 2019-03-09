@@ -14,55 +14,46 @@
 #  You should have received a copy of the GNU General Public License along with
 #  Motley. If not, see <http://www.gnu.org/licenses/>.
 #
+"""Configuration file for the Sphinx documentation builder.
 
-#
-# Configuration file for the Sphinx documentation builder.
-#
-# This file does only contain a selection of the most common options. For a
-# full list see the documentation:
-# http://www.sphinx-doc.org/en/master/config
+This file does only contain a selection of the most common options. For a full
+list see the documentation: http://www.sphinx-doc.org/en/master/config
 
-# Parser options
+"""
+__copyright__ = '2019 Frootlab Developers'
+__author__ = 'Frootlab Developers'
+__email__ = 'frootlab@gmail.com'
+__authors__ = ['Patrick Michl <patrick.michl@gmail.com>']
+__license__ = 'GPLv3'
+__docformat__ = 'google'
 
-# from recommonmark.parser import CommonMarkParser
+# -- Project information -----------------------------------------------------
 
-# source_parsers = {
-#     '.md': CommonMarkParser,
-# }
-
-# -- Path setup --------------------------------------------------------------
-
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, like shown here.
-#
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 
+import motley as package
 
-# -- Project information -----------------------------------------------------
-
-import motley
-
-project = motley.__name__
-copyright = motley.__copyright__
-author = motley.__author__
-version = motley.__version__
-release = motley.__version__
-
-add_module_names = False
+project = package.__name__
+copyright = package.__copyright__
+author = package.__author__
+version = package.__version__
+release = package.__version__
 
 # -- General configuration ---------------------------------------------------
+
+add_module_names = False
 
 # Run apidoc
 
 def run_apidoc(_) -> None:
     from sphinx.apidoc import main
-    sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+    sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'motley'))
     cur_dir = os.path.abspath(os.path.dirname(__file__))
-    module = os.path.join(cur_dir, '..', 'motley')
-    main(['-e', '-o', cur_dir, module, '--force'])
+    out_dir = os.path.join(cur_dir, 'api')
+    pkg_dir = os.path.join(cur_dir, '..', 'motley')
+    main(['', '-o', out_dir, pkg_dir, '--separate'])
 
 def setup(app) -> None:
     app.connect('builder-inited', run_apidoc)
@@ -78,7 +69,6 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
     'sphinx.ext.todo',
-    #'sphinx_autodoc_typehints',
     'sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
     'sphinx.ext.intersphinx']
@@ -117,6 +107,8 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
+html_title = 'Motley'
+html_logo = 'logo/Motley-128.png'
 html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -185,8 +177,7 @@ latex_elements = { # type: ignore
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'motley.tex', 'Motley Documentation',
-     'Patrick Michl', 'manual'),
+    (master_doc, 'motley.tex', 'Motley', 'Patrick Michl', 'manual'),
 ]
 
 
@@ -195,8 +186,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'motley', 'Motley Documentation',
-     [author], 1)
+    (master_doc, 'motley', 'Motley', [author], 1)
 ]
 
 
@@ -206,9 +196,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'motley', 'Motley Documentation',
-     author, 'motley', 'One line description of project.',
-     'Miscellaneous'),
+    (master_doc, 'motley', 'Motley', author, 'motley',
+    'One line description of project.', 'Miscellaneous'),
 ]
 
 
@@ -236,7 +225,6 @@ epub_exclude_files = ['search.html']
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
-
 
 # Intersphinx Mapping
 intersphinx_mapping = {

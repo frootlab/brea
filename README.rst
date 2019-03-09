@@ -2,7 +2,7 @@
 
    <div align="center">
      <a href="https://github.com/frootlab/pandora">
-       <img src="https://raw.githubusercontent.com/frootlab/motley/master/docs/logo/Motley-256.png">
+       <img src="https://bit.ly/2UnJSJE">
      </a>
      <br>
    </div>

@@ -3,15 +3,16 @@ Motley
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
 
-   Introduction <instroduction>
+   Introduction <introduction>
    Installation <install>
    API Reference <api/motley>
    Glossary <glossary>
    License <license>
 
-Index
------
+Appendix
+--------
 
 * :ref:`genindex`
 * :ref:`modindex`
