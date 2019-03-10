@@ -29,21 +29,25 @@ __docformat__ = 'google'
 
 # -- Project information -----------------------------------------------------
 
+import pathlib
+import re
+
+# Parse top level module for attributes
+text = pathlib.Path('../pandb/__init__.py').read_text()
+pattern = r"^[ ]*__([^\d\W]\w*)__[ ]*=[ ]*['\"]([^'\"]*)['\"]"
+matches = re.finditer(pattern, text, re.M)
+pkg = {str(m.group(1)): str(m.group(2)) for m in matches}
+
+# Define module variables used by Sphinx
+project = 'Motley'
+copyright = pkg['copyright']
+author = pkg['author']
+version = pkg['version']
+release = pkg['version']
+
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
-
-import motley as package
-
-project = package.__name__
-copyright = package.__copyright__
-author = package.__author__
-version = package.__version__
-release = package.__version__
-
-# -- General configuration ---------------------------------------------------
-
-add_module_names = False
 
 # Run apidoc
 
@@ -58,13 +62,12 @@ def run_apidoc(_) -> None:
 def setup(app) -> None:
     app.connect('builder-inited', run_apidoc)
 
-# If your documentation needs a minimal Sphinx version, state it here.
-#
-# needs_sphinx = '1.0'
+# -- General configuration ---------------------------------------------------
 
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
+add_module_names = False
+
+# Add any Sphinx extension module names here, as strings. They can be extensions
+# coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
@@ -107,7 +110,7 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_title = 'Motley'
+html_title = project
 html_logo = 'logo/Motley-128.png'
 html_theme = 'sphinx_rtd_theme'
 
@@ -146,12 +149,10 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 
-
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'motleydoc'
-
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -177,7 +178,7 @@ latex_elements = { # type: ignore
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'motley.tex', 'Motley', 'Patrick Michl', 'manual'),
+    (master_doc, 'motley.tex', project, 'Patrick Michl', 'manual'),
 ]
 
 
@@ -186,7 +187,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'motley', 'Motley', [author], 1)
+    (master_doc, 'motley', project, [author], 1)
 ]
 
 
@@ -196,7 +197,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'motley', 'Motley', author, 'motley',
+    (master_doc, 'motley', project, author, 'motley',
     'One line description of project.', 'Miscellaneous'),
 ]
 
@@ -220,8 +221,6 @@ epub_exclude_files = ['search.html']
 
 
 # -- Extension configuration -------------------------------------------------
-
-# -- Options for todo extension ----------------------------------------------
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True

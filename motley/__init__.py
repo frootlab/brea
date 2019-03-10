@@ -17,14 +17,14 @@
 """Motley code catalog.
 
 *Motley* is a planed catalog server for algorithm storage and evaluation. Motley
-aims to serve as an algorithm catalog for `nemoa`_ to allow the client-side
-automatic usage of current *state-of-the-art* (STOA) algorithms. Thereby any
-respectively used STOA algorithm is determined server-sided by it's category
-and a chosen metric. An example for such a metric would be the average
-prediction accuracy within a fixed set of *gold standard samples* of the
-respective domain of application (e.g. latin handwriting samples, spoken word
-samples, TCGA gene expression data, etc.). Nevertheless also the metric by
-itself can be a STOA algorithm.
+aims to serve as an algorithm catalog for Nemoa to allow the client-side
+automatic usage of **currently best fitting** (CBF) algorithms. Thereby any
+respectively used CBF algorithm is determined server-sided by it's category and
+a chosen metric. An example for such a metric would be the average prediction
+accuracy within a fixed set of *gold standard samples* of the respective domain
+of application (e.g. latin handwriting samples, spoken word samples, TCGA gene
+expression data, etc.). Nevertheless also the metric by itself can be a CBF
+algorithm.
 
 """
 

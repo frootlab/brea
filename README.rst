@@ -1,10 +1,10 @@
 .. raw:: html
 
    <div align="center">
-     <a href="https://github.com/frootlab/pandora">
-       <img src="https://bit.ly/2UnJSJE">
+     <a href="https://github.com/frootlab/motley">
+       <img src="https://bit.ly/2Trt3RO">
      </a>
-     <br>
+     <br><br>
    </div>
 
 Motley

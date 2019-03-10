@@ -30,20 +30,17 @@ import setuptools
 def install() -> None:
     """Setuptools based installation script."""
 
-    # Get module variables from the package's top level module
+    # Parse top level module for attributes
     text = pathlib.Path('./motley/__init__.py').read_text()
-    rekey = "__([a-zA-Z][a-zA-Z0-9_]*)__"
-    reval = r"['\"]([^'\"]*)['\"]"
-    pattern = f"^[ ]*{rekey}[ ]*=[ ]*{reval}"
-    pkg_vars = {}
-    for mo in re.finditer(pattern, text, re.M):
-        pkg_vars[str(mo.group(1))] = str(mo.group(2))
+    pattern = r"^[ ]*__([^\d\W]\w*)__[ ]*=[ ]*['\"]([^'\"]*)['\"]"
+    matches = re.finditer(pattern, text, re.M)
+    pkg = {str(m.group(1)): str(m.group(2)) for m in matches}
 
     # Install package
     setuptools.setup(
         name='motley',
-        version=pkg_vars['version'],
-        description='motley code catalog',
+        version=pkg['version'],
+        description='Motley Code Catalog',
         long_description=pathlib.Path('.', 'README.rst').read_text(),
         long_description_content_type='text/x-rst',
         classifiers=[
@@ -60,9 +57,9 @@ def install() -> None:
             'catalog '
             'catalog-software '),
         url='https://github.com/frootlab/motley',
-        author=pkg_vars['author'],
-        author_email=pkg_vars['email'],
-        license=pkg_vars['license'],
+        author=pkg['author'],
+        author_email=pkg['email'],
+        license=pkg['license'],
         packages=setuptools.find_packages(exclude=['docs', 'tests']),
         package_dir={
             'motley': 'motley'},

@@ -7,7 +7,7 @@ Motley
 
    Introduction <introduction>
    Installation <install>
-   API Reference <api/motley>
+   API Reference <api/modules>
    Glossary <glossary>
    License <license>
 
