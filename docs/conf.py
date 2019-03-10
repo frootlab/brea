@@ -33,7 +33,7 @@ import pathlib
 import re
 
 # Parse top level module for attributes
-text = pathlib.Path('../pandb/__init__.py').read_text()
+text = pathlib.Path('../motley/__init__.py').read_text()
 pattern = r"^[ ]*__([^\d\W]\w*)__[ ]*=[ ]*['\"]([^'\"]*)['\"]"
 matches = re.finditer(pattern, text, re.M)
 pkg = {str(m.group(1)): str(m.group(2)) for m in matches}
