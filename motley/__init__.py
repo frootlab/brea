@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#
 # Copyright (C) 2019 Frootlab Developers
 #
 # This file is part of Motley, https://github.com/frootlab/motley
@@ -16,9 +17,9 @@
 #
 """Motley code catalog.
 
-*Motley* is a planed catalog server for algorithm storage and evaluation. Motley
+Motley is a planed catalog server for algorithm storage and evaluation. Motley
 aims to serve as an algorithm catalog for Nemoa to allow the client-side
-automatic usage of **currently best fitting** (CBF) algorithms. Thereby any
+automatic usage of currently best fitting (CBF) algorithms. Thereby any
 respectively used CBF algorithm is determined server-sided by it's category and
 a chosen metric. An example for such a metric would be the average prediction
 accuracy within a fixed set of *gold standard samples* of the respective domain
@@ -27,13 +28,15 @@ expression data, etc.). Nevertheless also the metric by itself can be a CBF
 algorithm.
 
 """
-
 __version__ = '0.0.1'
 __license__ = 'GPLv3'
-__copyright__ = 'Copyright (C) 2019 Frootlab Developers'
+__copyright__ = '2019 Frootlab Developers'
+__description__ = 'Catalog Server and Algorithm Repository'
+__url__ = 'https://github.com/frootlab/motley'
 __organization__ = 'Frootlab'
-__author__ = 'frootlab'
+__author__ = 'Frootlab Developers'
 __email__ = 'frootlab@gmail.com'
-__maintainer__ = 'Patrick Michl'
-__docformat__ = 'google'
 __authors__ = ['Patrick Michl <patrick.michl@gmail.com>']
+__maintainer__ = 'Patrick Michl'
+__credits__ = []
+__docformat__ = 'google'

@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+#
 # Copyright (C) 2019 Frootlab Developers
 #
 # This file is part of Motley, https://github.com/frootlab/motley
@@ -17,10 +18,11 @@
 #
 """Setuptools based installation."""
 
-__license__ = 'GPLv3'
 __copyright__ = '2019 Frootlab Developers'
-__email__ = 'frootlab@gmail.com'
+__license__ = 'GPLv3'
 __docformat__ = 'google'
+__author__ = 'Frootlab Developers'
+__email__ = 'frootlab@gmail.com'
 __authors__ = ['Patrick Michl <patrick.michl@gmail.com>']
 
 import pathlib
@@ -40,7 +42,7 @@ def install() -> None:
     setuptools.setup(
         name='motley',
         version=pkg['version'],
-        description='Motley Code Catalog',
+        description=pkg['description'],
         long_description=pathlib.Path('.', 'README.rst').read_text(),
         long_description_content_type='text/x-rst',
         classifiers=[
@@ -56,7 +58,7 @@ def install() -> None:
         keywords=(
             'catalog '
             'catalog-software '),
-        url='https://github.com/frootlab/motley',
+        url=pkg['url'],
         author=pkg['author'],
         author_email=pkg['email'],
         license=pkg['license'],

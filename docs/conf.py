@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#
 # Copyright (C) 2019 Frootlab Developers
 #
 # This file is part of Motley, https://github.com/frootlab/motley
@@ -21,25 +22,28 @@ list see the documentation: http://www.sphinx-doc.org/en/master/config
 
 """
 __copyright__ = '2019 Frootlab Developers'
+__license__ = 'GPLv3'
+__docformat__ = 'google'
 __author__ = 'Frootlab Developers'
 __email__ = 'frootlab@gmail.com'
 __authors__ = ['Patrick Michl <patrick.michl@gmail.com>']
-__license__ = 'GPLv3'
-__docformat__ = 'google'
 
 # -- Project information -----------------------------------------------------
 
 import pathlib
 import re
 
+# Module Variables
+project = 'Motley'
+package = 'motley'
+
 # Parse top level module for attributes
-text = pathlib.Path('../motley/__init__.py').read_text()
+text = pathlib.Path(f'../{package}/__init__.py').read_text()
 pattern = r"^[ ]*__([^\d\W]\w*)__[ ]*=[ ]*['\"]([^'\"]*)['\"]"
 matches = re.finditer(pattern, text, re.M)
 pkg = {str(m.group(1)): str(m.group(2)) for m in matches}
 
 # Define module variables used by Sphinx
-project = 'Motley'
 copyright = pkg['copyright']
 author = pkg['author']
 version = pkg['version']
@@ -53,10 +57,10 @@ sys.path.insert(0, os.path.abspath('..'))
 
 def run_apidoc(_) -> None:
     from sphinx.apidoc import main
-    sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'motley'))
+    sys.path.append(os.path.join(os.path.dirname(__file__), '..', package))
     cur_dir = os.path.abspath(os.path.dirname(__file__))
     out_dir = os.path.join(cur_dir, 'api')
-    pkg_dir = os.path.join(cur_dir, '..', 'motley')
+    pkg_dir = os.path.join(cur_dir, '..', package)
     main(['', '-o', out_dir, pkg_dir, '--separate'])
 
 def setup(app) -> None:
@@ -111,7 +115,7 @@ pygments_style = None
 # a list of builtin themes.
 #
 html_title = project
-html_logo = 'logo/Motley-128.png'
+html_logo = f'logo/{project}-128.png'
 html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -152,7 +156,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'motleydoc'
+htmlhelp_basename = f'{package}doc'
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -178,7 +182,7 @@ latex_elements = { # type: ignore
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'motley.tex', project, 'Patrick Michl', 'manual'),
+    (master_doc, f'{package}.tex', project, 'Patrick Michl', 'manual'),
 ]
 
 
@@ -187,7 +191,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'motley', project, [author], 1)
+    (master_doc, package, project, [author], 1)
 ]
 
 
@@ -197,8 +201,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'motley', project, author, 'motley',
-    'One line description of project.', 'Miscellaneous'),
+    (master_doc, package, project, author, package,
+    pkg['description'], 'Miscellaneous'),
 ]
 
 

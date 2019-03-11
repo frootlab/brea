@@ -42,7 +42,7 @@ costs. Also motley supports scientific applications, by facilitating a local
 of algorithms, e.g. developed within a PhD-position or program.
 
 Motley is `open source`_, based on the `Python`_ programming language and
-actively developed as part of `Project Infimum`_ at `Frootlab`_.
+actively developed as part of the `Smart Analytics`_ project at `Frootlab`_.
 
 Current Development Status
 --------------------------
@@ -92,7 +92,7 @@ license`_::
      Patrick Michl <patrick.michl@gmail.com>
 
 .. _Python: https://www.python.org/
-.. _Project Infimum: https://github.com/orgs/frootlab/projects
+.. _Smart Analytics: https://github.com/orgs/frootlab/projects
 .. _Frootlab: https://github.com/frootlab
 .. _Nemoa: https://github.com/frootlab/nemoa
 .. _Pandora: https://github.com/frootlab/pandora

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#
 # Copyright (C) 2019 Frootlab Developers
 #
 # This file is part of Motley, https://github.com/frootlab/motley
@@ -15,8 +16,9 @@
 #  Motley. If not, see <http://www.gnu.org/licenses/>.
 #
 
+__copyright__ = '2019 Frootlab Developers'
 __license__ = 'GPLv3'
-__copyright__ = 'Copyright (C) 2019 Frootlab Developers'
-__email__ = 'frootlab@gmail.com'
 __docformat__ = 'google'
+__author__ = 'Frootlab Developers'
+__email__ = 'frootlab@gmail.com'
 __authors__ = ['Patrick Michl <patrick.michl@gmail.com>']
