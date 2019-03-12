@@ -43,8 +43,8 @@ def install() -> None:
         name='motley',
         version=pkg['version'],
         description=pkg['description'],
-        long_description=pathlib.Path('.', 'README.rst').read_text(),
-        long_description_content_type='text/x-rst',
+        long_description=pathlib.Path('.', 'README.md').read_text(),
+        long_description_content_type='text/markdown',
         classifiers=[
             'Development Status :: 1 - Planning',
             'Intended Audience :: Developers',
