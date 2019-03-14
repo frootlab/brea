@@ -26,7 +26,7 @@ spoken word samples, TCGA gene expression data, etc.). Consequently Motley is
 also required to host or connect these samples by using
 [Pandora](https://github.com/frootlab/pandora).
 
-Due to this approach motley allows the implementation of *enterprise analytics*
+Due to this approach motley allows the implementation of *smart analytics*
 projects, that are automatically kept up-to-date by a minimum of maintenance
 costs. Also motley supports scientific applications, by facilitating a local
 (workgroup, lab, institution) or global publication, application and evaluation
@@ -71,7 +71,7 @@ the [issue tracker](https://github.com/frootlab/motley/issues) provided by
 GitHub. Currently, as the Frootlab Developers team still is growing, we do not
 provide any Contribution Guide Lines to collaboration partners. However, if you
 are interested to join the team, we would be glad, to receive an informal
-[application](patrick.michl@gmail.com).
+[application](mailto:application@frootlab.org).
 
 License
 -------
@@ -80,4 +80,4 @@ Motley is [open source](https://github.com/frootlab/motley) and available free
 for any use under the [GPLv3](https://www.gnu.org/licenses/gpl.html) license:
 
     © 2019 Frootlab Developers:
-      Patrick Michl <patrick.michl@gmail.com>
+      Patrick Michl <patrick.michl@frootlab.org>
