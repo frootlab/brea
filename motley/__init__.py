@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2019 Frootlab Developers
+# Copyright (C) 2019 Frootlab
 #
-# This file is part of Motley, https://github.com/frootlab/motley
+# This file is part of Motley, https://www.frootlab.org/motley
 #
 #  Motley is free software: you can redistribute it and/or modify it under the
 #  terms of the GNU General Public License as published by the Free Software
@@ -30,7 +30,7 @@ algorithm.
 """
 __version__ = '0.0.1'
 __license__ = 'GPLv3'
-__copyright__ = '2019 Frootlab Developers'
+__copyright__ = '2019 Frootlab'
 __description__ = 'Catalog Server and Algorithm Repository'
 __url__ = 'https://www.frootlab.org/motley'
 __organization__ = 'Frootlab'

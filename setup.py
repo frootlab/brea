@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2019 Frootlab Developers
+# Copyright (C) 2019 Frootlab
 #
-# This file is part of Motley, https://github.com/frootlab/motley
+# This file is part of Motley, https://www.frootlab.org/motley
 #
 #  Motley is free software: you can redistribute it and/or modify it under the
 #  terms of the GNU General Public License as published by the Free Software
@@ -18,7 +18,7 @@
 #
 """Setuptools based installation."""
 
-__copyright__ = '2019 Frootlab Developers'
+__copyright__ = '2019 Frootlab'
 __license__ = 'GPLv3'
 __docformat__ = 'google'
 __author__ = 'Frootlab Developers'
