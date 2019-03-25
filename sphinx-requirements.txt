@@ -5,3 +5,4 @@ pyparsing>=2.2
 flib>=0.9
 pandb>=0.1.8
 nemoa>=0.5.581
+sphinx-bootstrap-theme>=0.6.5
