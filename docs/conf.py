@@ -21,17 +21,18 @@ This file does only contain a selection of the most common options. For a full
 list see the documentation: http://www.sphinx-doc.org/en/master/config
 
 """
-__copyright__ = '2019 Frootlab Developers'
+__copyright__ = '2019 Frootlab'
 __license__ = 'GPLv3'
 __docformat__ = 'google'
 __author__ = 'Frootlab Developers'
 __email__ = 'contact@frootlab.org'
 __authors__ = ['Patrick Michl <patrick.michl@frootlab.org>']
 
-# -- Project information -----------------------------------------------------
-
 import pathlib
 import re
+import sphinx_bootstrap_theme
+
+# -- Project information -----------------------------------------------------
 
 # Module Variables
 project = 'Motley'
@@ -113,10 +114,10 @@ pygments_style = None
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#
 html_title = project
 html_logo = f'logo/{project}-128.png'
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'bootstrap'
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
