@@ -68,9 +68,9 @@ def install() -> None:
         python_requires='>=3.7',
         install_requires=[
             'numpy>=1.15',
-            'flib>=0.9',
-            'pandb>=0.1.8',
-            'nemoa>=0.5.581']
+            'hup>=0.9.2',
+            'pandb>=0.1.11',
+            'nemoa>=0.5.582']
     )
 
 if __name__ == '__main__':

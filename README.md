@@ -1,7 +1,5 @@
 <div align="center">
-  <a href="https://github.com/frootlab/motley">
-    <img src="https://bit.ly/2TsTJ4q">
-  </a>
+  <img src="https://www.frootlab.org/images/fig/motley.svg" width=350px>
 </div>
 
 Motley
@@ -19,12 +17,12 @@ paradigm.
 
 Thereby Motley is required to host and deliver algorithms as well es to
 cyclically evaluate and index them with respect to their corresponding metrics,
-using [Nemoa](https://github.com/frootlab/nemoa). An example for such a metric
+using [Nemoa](https://www.frootlab.org/nemoa). An example for such a metric
 would be the average prediction accuracy within a fixed set of gold standard
 samples of the respective domain of application (e.g. latin handwriting samples,
 spoken word samples, TCGA gene expression data, etc.). Consequently Motley is
 also required to host or connect these samples by using
-[Pandora](https://github.com/frootlab/pandora).
+[Pandora](https://www.frootlab.org/pandora).
 
 Due to this approach motley allows the implementation of *smart analytics*
 projects, that are automatically kept up-to-date by a minimum of maintenance
@@ -32,10 +30,10 @@ costs. Also motley supports scientific applications, by facilitating a local
 (workgroup, lab, institution) or global publication, application and evaluation
 of algorithms, e.g. developed within a PhD-position or program.
 
-Motley is [open source](https://github.com/frootlab/motley), based on the
-[Python](https://www.python.org/) programming language and actively developed as
-part of the [Smart Analytics](https://github.com/orgs/frootlab/projects) project
-at [Frootlab](https://github.com/frootlab).
+Motley is open source, based on the [Python](https://www.python.org/)
+programming language and actively developed as part of the [Liquid
+Code](https://www.frootlab.org/liquid) framework at
+[Frootlab](https://www.frootlab.org).
 
 Current Development Status
 --------------------------
@@ -76,8 +74,8 @@ are interested to join the team, we would be glad, to receive an informal
 License
 -------
 
-Motley is [open source](https://github.com/frootlab/motley) and available free
-for any use under the [GPLv3](https://www.gnu.org/licenses/gpl.html) license:
+Motley is open source and available free for any use under the
+[GPLv3](https://www.gnu.org/licenses/gpl.html) license:
 
     © 2019 Frootlab Developers:
       Patrick Michl <patrick.michl@frootlab.org>
