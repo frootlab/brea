@@ -69,7 +69,7 @@ def install() -> None:
         install_requires=[
             'numpy>=1.15',
             'hup>=0.9.2',
-            'pandb>=0.1.11',
+            'deet>=0.1.11',
             'nemoa>=0.5.582']
     )
 
