@@ -1,7 +1,7 @@
 Introduction
 ============
 
-*Motley* is a planed catalog server for algorithm storage and evaluation. Motley
+*Brea* is a planed catalog server for algorithm storage and evaluation. Brea
 aims to serve as an algorithm catalog for `Rian`_ to allow the client-side
 automatic usage of **currently best fitting** (CBF) algorithms. Thereby any
 respectively used CBF algorithm is determined server-sided by it's category and
@@ -11,14 +11,14 @@ of application (e.g. latin handwriting samples, spoken word samples, TCGA gene
 expression data, etc.). Nevertheless also the metric by itself can be a CBF
 algorithm.
 
-Due to this approach Motley allows the implementation of *enterprise analytics*
+Due to this approach Brea allows the implementation of *enterprise analytics*
 projects, that are automatically kept up-to-date by a minimum of maintenance
-costs. Also motley supports scientific applications, by facilitating a local
+costs. Also brea supports scientific applications, by facilitating a local
 (workgroup, lab, institution) or global publication, application and evaluation
 of algorithms, e.g. developed within a PhD-position or program.
 
 .. _Python: https://www.python.org/
 .. _GPLv3 license: https://www.gnu.org/licenses/gpl.html
-.. _issue tracker: https://github.com/frootlab/motley/issues
+.. _issue tracker: https://github.com/frootlab/brea/issues
 .. _frootlab: https://github.com/frootlab
 .. _Rian: https://github.com/frootlab/rian

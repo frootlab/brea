@@ -2,18 +2,18 @@
 #
 # Copyright (C) 2019 Frootlab
 #
-# This file is part of Motley, https://www.frootlab.org/motley
+# This file is part of Frootlab Brea, https://www.frootlab.org/brea
 #
-#  Motley is free software: you can redistribute it and/or modify it under the
+#  Brea is free software: you can redistribute it and/or modify it under the
 #  terms of the GNU General Public License as published by the Free Software
 #  Foundation, either version 3 of the License, or (at your option) any later
 #  version.
 #
-#  Motley is distributed in the hope that it will be useful, but WITHOUT ANY
+#  Brea is distributed in the hope that it will be useful, but WITHOUT ANY
 #  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
 #  A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 #  You should have received a copy of the GNU General Public License along with
-#  Motley. If not, see <http://www.gnu.org/licenses/>.
+#  Brea. If not, see <http://www.gnu.org/licenses/>.
 #
 """Configuration file for the Sphinx documentation builder.
 
@@ -35,8 +35,8 @@ import sphinx_bootstrap_theme
 # -- Project information -----------------------------------------------------
 
 # Module Variables
-project = 'Motley'
-package = 'motley'
+project = 'Brea'
+package = 'brea'
 
 # Parse top level module for attributes
 text = pathlib.Path(f'../{package}/__init__.py').read_text()
