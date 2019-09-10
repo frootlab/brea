@@ -17,7 +17,7 @@ paradigm.
 
 Thereby Motley is required to host and deliver algorithms as well es to
 cyclically evaluate and index them with respect to their corresponding metrics,
-using [Nemoa](https://www.frootlab.org/nemoa). An example for such a metric
+using [Rian](https://www.frootlab.org/rian). An example for such a metric
 would be the average prediction accuracy within a fixed set of gold standard
 samples of the respective domain of application (e.g. latin handwriting samples,
 spoken word samples, TCGA gene expression data, etc.). Consequently Motley is

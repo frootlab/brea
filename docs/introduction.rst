@@ -2,7 +2,7 @@ Introduction
 ============
 
 *Motley* is a planed catalog server for algorithm storage and evaluation. Motley
-aims to serve as an algorithm catalog for `Nemoa`_ to allow the client-side
+aims to serve as an algorithm catalog for `Rian`_ to allow the client-side
 automatic usage of **currently best fitting** (CBF) algorithms. Thereby any
 respectively used CBF algorithm is determined server-sided by it's category and
 a chosen metric. An example for such a metric would be the average prediction
@@ -21,4 +21,4 @@ of algorithms, e.g. developed within a PhD-position or program.
 .. _GPLv3 license: https://www.gnu.org/licenses/gpl.html
 .. _issue tracker: https://github.com/frootlab/motley/issues
 .. _frootlab: https://github.com/frootlab
-.. _Nemoa: https://github.com/frootlab/nemoa
+.. _Rian: https://github.com/frootlab/rian

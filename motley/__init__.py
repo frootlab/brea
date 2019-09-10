@@ -18,7 +18,7 @@
 """Motley code catalog.
 
 Motley is a planed catalog server for algorithm storage and evaluation. Motley
-aims to serve as an algorithm catalog for Nemoa to allow the client-side
+aims to serve as an algorithm catalog for Rian to allow the client-side
 automatic usage of currently best fitting (CBF) algorithms. Thereby any
 respectively used CBF algorithm is determined server-sided by it's category and
 a chosen metric. An example for such a metric would be the average prediction

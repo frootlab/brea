@@ -70,7 +70,7 @@ def install() -> None:
             'numpy>=1.15',
             'hup>=0.9.2',
             'deet>=0.1.11',
-            'nemoa>=0.5.582']
+            'rian>=0.5.582']
     )
 
 if __name__ == '__main__':
