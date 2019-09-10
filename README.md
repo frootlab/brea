@@ -31,8 +31,8 @@ costs. Also brea supports scientific applications, by facilitating a local
 of algorithms, e.g. developed within a PhD-position or program.
 
 Brea is open source, based on the [Python](https://www.python.org/)
-programming language and actively developed as part of the [Liquid
-Code](https://www.frootlab.org/liquid) framework at
+programming language and actively developed as part of the
+[Vivid Code](https://www.frootlab.org/vivid) framework at
 [Frootlab](https://www.frootlab.org).
 
 Current Development Status
