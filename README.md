@@ -1,9 +1,9 @@
 <div align="center">
-  <img src="https://www.frootlab.org/images/fig/brea.svg" width=350px>
+  <img src="https://www.frootlab.org/images/fig/vivid-store.svg" width=350px>
 </div>
 
 Brea
-======
+====
 
 [![Building Status](https://travis-ci.org/frootlab/brea.svg?branch=master)](https://travis-ci.org/frootlab/brea)
 [![Documentation Status](https://readthedocs.org/projects/brea/badge/?version=latest)](https://brea.readthedocs.io/en/latest/?badge=latest)
@@ -15,14 +15,13 @@ catalog to allow the usage of abstract **currently best fitting** (CBF)
 algorithms, as required by the **Cloud-Assisted Meta Programming** (CAMP)
 paradigm.
 
-Thereby Brea is required to host and deliver algorithms as well es to
-cyclically evaluate and index them with respect to their corresponding metrics,
-using [Rian](https://www.frootlab.org/rian). An example for such a metric
-would be the average prediction accuracy within a fixed set of gold standard
-samples of the respective domain of application (e.g. latin handwriting samples,
-spoken word samples, TCGA gene expression data, etc.). Consequently Brea is
-also required to host or connect these samples by using
-[Deet](https://www.frootlab.org/deet).
+Thereby Brea is required to host and deliver algorithms as well as to cyclically
+evaluate and index them with respect to their corresponding metrics, using
+[Rian](https://www.frootlab.org/rian). An example for such a metric would be the
+average prediction accuracy within a fixed set of gold standard samples of the
+respective domain of application (e.g. latin handwriting samples, spoken word
+samples, TCGA gene expression data, etc.). Consequently Brea is also required to
+host or connect these samples by using [Deet](https://www.frootlab.org/deet).
 
 Due to this approach brea allows the implementation of *smart analytics*
 projects, that are automatically kept up-to-date by a minimum of maintenance
